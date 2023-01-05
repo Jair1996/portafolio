@@ -35,17 +35,17 @@ export const contactInformation: Array<ContactInformation> = [
 export const socialNetworks: Array<SocialNetwork> = [
   {
     id: 1,
-    icon: "iconTwitter",
+    icon: "./assets/icons/icon_twitter.svg",
     href: "https://twitter.com/jairtellodev",
   },
   {
     id: 2,
-    icon: "iconLinkedin",
+    icon: "./assets/icons/icon_linkedin.svg",
     href: "https://www.linkedin.com/in/jairdeyner",
   },
   {
     id: 3,
-    icon: "iconGithub",
+    icon: "./assets/icons/icon_github.svg",
     href: "https://github.com/jairdeyner",
   },
 ];

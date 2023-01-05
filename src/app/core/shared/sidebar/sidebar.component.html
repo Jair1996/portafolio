@@ -25,8 +25,7 @@
 
     <div class="sidebar__socialIconsContainer">
       <div *ngFor="let s of socialNetworks" class="sidebar__socialIconBox">
-        <!-- <Icon icon={s.icon} href={s.href} /> -->
-        Social
+        <app-icon [icon]="s.icon" [href]="s.href"></app-icon>
       </div>
     </div>
   </div>
