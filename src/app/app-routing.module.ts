@@ -4,11 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeModule } from './modules/home/home.module';
 
 import { HomePageComponent } from './modules/home/pages/home-page/home-page.component';
+import { PortfolioPageComponent } from './modules/portafolio/pages/portfolio-page/portfolio-page.component';
+import { PortafolioModule } from './modules/portafolio/portafolio.module';
 
 const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
+  },
+  {
+    path: 'portafolio',
+    component: PortfolioPageComponent,
   },
   {
     path: '**',
@@ -18,7 +24,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), HomeModule],
+  imports: [RouterModule.forRoot(routes), HomeModule, PortafolioModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
