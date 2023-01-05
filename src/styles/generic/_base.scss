@@ -1,0 +1,75 @@
+@use "../settings/typography";
+@use "../settings/colors";
+
+html {
+  background-color: colors.$bg;
+}
+
+body {
+  font-family: typography.$ff_roboto;
+  color: colors.$text_primary;
+  overflow-y: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: typography.$ff_poppins;
+}
+
+::selection {
+  background-color: colors.$bg_selection;
+  color: colors.$text_selection;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: colors.$text_primary;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: colors.$bg;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba($color: #fff, $alpha: 0.102);
+  border-radius: 4px;
+}
