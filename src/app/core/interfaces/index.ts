@@ -20,3 +20,8 @@ export interface ContactInformation {
   text: string;
   htmlElement: AnchorElement | ParagraphElement;
 }
+
+export interface Skill {
+  name: string;
+  img: string;
+}
