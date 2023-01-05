@@ -1,13 +1,22 @@
 <nav class="navbar">
   <ul class="navbar__list">
     <li class="navbar__item">
-      <a routerLink="/" routerLinkActive="navbar__linkActive">Inicio</a>
+      <a
+        routerLink="/"
+        routerLinkActive="navbar__linkActive"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Inicio</a
+      >
     </li>
     <li class="navbar__item">
-      <a routerLink="/portafolio" routerLinkActive="navbar__linkActive">Portafolio</a>
+      <a routerLink="/portafolio" routerLinkActive="navbar__linkActive"
+        >Portafolio</a
+      >
     </li>
     <li class="navbar__item">
-      <a routerLink="/contacto" routerLinkActive="navbar__linkActive">Contacto</a>
+      <a routerLink="/contacto" routerLinkActive="navbar__linkActive"
+        >Contacto</a
+      >
     </li>
   </ul>
 </nav>
