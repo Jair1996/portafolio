@@ -1,5 +1,5 @@
 <button
-  class="button button-{{model}} button-{{size}}"
+  class="button button-{{ model }} button-{{ size }}"
   [type]="type"
   [disabled]="disabled"
 >
@@ -10,9 +10,10 @@
     target="_blank"
     rel="noreferrer"
   >
+    {{ value }}
   </a>
 
   <ng-template #span>
-    <span class="button__text">{{value}}</span>
+    <span class="button__text">{{ value }}</span>
   </ng-template>
 </button>
