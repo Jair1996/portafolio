@@ -1,0 +1,46 @@
+@use "../styles/tools/helpers";
+@use "../styles/tools/media";
+@use "../styles/settings/colors";
+
+.app {
+  display: flex;
+  justify-content: center;
+  padding: helpers.flowFromTo(12px, 60px) helpers.flowFromTo(12px, 25px);
+  padding-bottom: 75px;
+
+  @include media.from(lg) {
+    padding-bottom: helpers.flowFromTo(12px, 60px);
+  }
+
+  @include media.from(xl) {
+    padding-bottom: 10px;
+  }
+
+  .div {
+    background-color: gray;
+    border: 1px solid black;
+  }
+}
+
+.layout {
+  display: grid;
+  gap: helpers.flowFromTo(15px, 25px);
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+
+  @include media.from(xl) {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.main {
+  background-color: colors.$bg_primary;
+  border: 1px solid colors.$border;
+  border-radius: 20px;
+  padding: helpers.flowFromTo(15px, 30px);
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - helpers.flowFromTo(112px, 300px));
+}
+
