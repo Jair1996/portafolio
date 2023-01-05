@@ -10,6 +10,8 @@ import { ChipComponent } from './chip/chip.component';
 import { DividerComponent } from './divider/divider.component';
 import { InformationCardListComponent } from './card/information-card-list/information-card-list.component';
 import { InformationCardComponent } from './card/information-card/information-card.component';
+import { HeadingComponent } from './heading/heading.component';
+import { ButtonComponent } from './button/button.component';
 
 
 
@@ -23,11 +25,15 @@ import { InformationCardComponent } from './card/information-card/information-ca
     ChipComponent,
     DividerComponent,
     InformationCardListComponent,
-    InformationCardComponent
+    InformationCardComponent,
+    HeadingComponent,
+    ButtonComponent
   ],
   exports: [
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeadingComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,

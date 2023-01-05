@@ -1,0 +1,18 @@
+<button
+  class="button button-{{model}} button-{{size}}"
+  [type]="type"
+  [disabled]="disabled"
+>
+  <a
+    *ngIf="href; else span"
+    class="button__anchor"
+    [href]="href"
+    target="_blank"
+    rel="noreferrer"
+  >
+  </a>
+
+  <ng-template #span>
+    <span class="button__text">{{value}}</span>
+  </ng-template>
+</button>

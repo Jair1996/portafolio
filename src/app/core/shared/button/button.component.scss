@@ -1,0 +1,52 @@
+@use "/src/styles/settings/colors";
+@use "/src/styles/tools/fluid";
+
+.button {
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid colors.$text_secondary;
+  border-radius: 0.8em;
+  font-weight: 400;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &__anchor {
+    color: inherit;
+  }
+
+  &-primary {
+    background-color: colors.$bg_btn_primary;
+    color: #000;
+
+    &:hover {
+      background-color: darken($color: colors.$bg_btn_primary, $amount: 2);
+      border-color: darken($color: colors.$bg_btn_primary, $amount: 2);
+    }
+  }
+
+  &__text,
+  &__anchor {
+    display: inline-block;
+    padding: 0.93em 1.43em;
+  }
+
+  &-ghost {
+    color: colors.$text_secondary;
+
+    &:hover {
+      color: darken($color: colors.$bg_btn_primary, $amount: 2);
+      border-color: darken($color: colors.$bg_btn_primary, $amount: 2);
+    }
+  }
+
+  &-medium {
+    @include fluid.fontSize(12.3px, 14px);
+  }
+
+  &-normal {
+    @include fluid.fontSize(14px, 16px);
+  }
+}
