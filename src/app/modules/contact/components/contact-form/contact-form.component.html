@@ -1,0 +1,56 @@
+<section class="contactForm">
+  <form [formGroup]="contactForm" autocomplete="off" class="contactForm__form">
+    <div class="contactForm__inputBox">
+      <div class="contactForm__formControlContainer">
+        <label class="contactForm__label" htmlFor="name"> Nombre: </label>
+        <input
+          formControlName="name"
+          type="text"
+          class="contactForm__formControl"
+          id="name"
+          placeholder="Jair Tello"
+        />
+        <div *ngIf="isTheFieldInvalid('name')">
+          <span class="contactForm__text"> El nombre no puede ir vacío </span>
+        </div>
+      </div>
+      <div class="contactForm__formControlContainer">
+        <label class="contactForm__label" htmlFor="email"> Correo: </label>
+        <input
+          formControlName="email"
+          type="email"
+          class="contactForm__formControl"
+          id="email"
+          placeholder="jairdeyner730791@gmail.com"
+        />
+        <div *ngIf="isTheFieldInvalid('email')">
+          <span class="contactForm__text">El correo debe ser válido.</span>
+        </div>
+      </div>
+    </div>
+    <div class="contactForm__formControlContainer">
+      <label class="contactForm__label" htmlFor="message"> Mensaje: </label>
+      <textarea
+        formControlName="message"
+        class="contactForm__formControl"
+        id="message"
+        placeholder="Mensaje :)"
+        rows="5"
+      ></textarea>
+      <div *ngIf="isTheFieldInvalid('message')">
+        <span class="contactForm__text">
+          Debe tener al menos 10 carácteres.
+        </span>
+      </div>
+    </div>
+    <div class="contactForm__buttonBox">
+      <app-button
+        [disabled]="contactForm.invalid"
+        [model]="'ghost'"
+        [size]="'normal'"
+        [type]="'submit'"
+        [value]="'Enviar Mensaje'"
+      ></app-button>
+    </div>
+  </form>
+</section>
