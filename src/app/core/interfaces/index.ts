@@ -25,3 +25,10 @@ export interface Skill {
   name: string;
   img: string;
 }
+
+export interface Project {
+  homepage?: string;
+  img: string;
+  name: string;
+  repository: string;
+}

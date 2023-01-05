@@ -1,4 +1,4 @@
-import { ContactInformation, Skill, SocialNetwork } from "../interfaces";
+import { ContactInformation, Project, Skill, SocialNetwork } from "../interfaces";
 
 export const contactInformation: Array<ContactInformation> = [
   {
@@ -94,5 +94,31 @@ export const skills: Array<Skill> = [
   {
     name: "Figma",
     img: "./assets/images/skills/skill_figma.svg",
+  },
+];
+
+export const projects: Array<Project> = [
+  {
+    img: "./assets/images/projects/portfolio-screen.png",
+    name: "Portafolio - Angular",
+    repository: "https://github.com/Jair1996/portafolio",
+  },
+  {
+    img: "./assets/images/projects/portfolio-screen.png",
+    name: "Portafolio - React",
+    repository: "https://github.com/jairdeyner/portfolio",
+    homepage: "https://jairdeyner.vercel.app/",
+  },
+  {
+    homepage: "https://calvic.vercel.app",
+    img: "./assets/images/projects/calvic-screen.png",
+    name: "CALVIC",
+    repository: "https://github.com/Jair1996/calvic-app",
+  },
+  {
+    homepage: "https://gifexpert.vercel.app",
+    img: "./assets/images/projects/gifexpert-screen.png",
+    name: "Gif Expert",
+    repository: "https://github.com/jairdeyner/gif-expert",
   },
 ];

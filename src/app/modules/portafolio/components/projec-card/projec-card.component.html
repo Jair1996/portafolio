@@ -1,0 +1,24 @@
+<article class="projectCard">
+  <div class="projectCard__thumbnail">
+    <img class="projectCard__img" [src]="project.img" [alt]="project.name" />
+  </div>
+  <h3 class="projectCard__title">{{ project.name }}</h3>
+  <div class="projectCard__buttonsBox">
+    <app-button
+      *ngIf="project.homepage"
+      [model]="'primary'"
+      [size]="'medium'"
+      [type]="'button'"
+      [value]="'Ver Página'"
+      [href]="project.homepage"
+    ></app-button>
+
+    <app-button
+      [model]="'ghost'"
+      [size]="'medium'"
+      [type]="'button'"
+      [value]="'GitHub'"
+      [href]="project.repository"
+    ></app-button>
+  </div>
+</article>

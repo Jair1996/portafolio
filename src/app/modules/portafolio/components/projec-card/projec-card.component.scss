@@ -1,0 +1,36 @@
+@use "/src/styles/settings/colors";
+@use "/src/styles/settings/typography";
+@use "/src/styles/tools/helpers";
+
+.projectCard {
+  border-radius: 16px;
+  background-image: colors.$bg_gradient_gray;
+  padding: 10px;
+  padding-bottom: 23px;
+
+  &__thumbnail {
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1 / 0.8;
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: inherit;
+    object-fit: cover;
+    object-position: 50% 0;
+  }
+
+  &__title {
+    margin-bottom: helpers.flowFromTo(13px, 15px);
+    font-size: 16px;
+    font-family: typography.$ff_roboto;
+    font-weight: 400;
+  }
+
+  &__buttonsBox {
+    display: flex;
+    gap: 15px;
+  }
+}

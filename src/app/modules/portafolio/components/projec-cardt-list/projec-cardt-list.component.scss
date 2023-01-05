@@ -1,0 +1,15 @@
+@use "/src/styles/tools/helpers";
+@use "/src/styles/tools/media";
+
+.projectCardList {
+  display: grid;
+  gap: helpers.flowFromTo(15px, 22px);
+
+  @include media.from(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media.from(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
