@@ -1,0 +1,21 @@
+<article class="informationCard">
+  <div class="informationCard__iconBox">
+    <app-icon [icon]="data.icon" [size]="'small'"></app-icon>
+  </div>
+
+  <div class="informationCard__info">
+    <p class="informationCard__title">{{ data.title }}</p>
+    <p *ngIf="data.htmlElement.tag === 'p'" class="informationCard__text">
+      {{ data.text }}
+    </p>
+
+    <a
+      *ngIf="data.htmlElement.tag === 'a'"
+      class="informationCard__text"
+      [href]="data.htmlElement.href"
+      [title]="data.text"
+    >
+      {{ data.text }}
+    </a>
+  </div>
+</article>

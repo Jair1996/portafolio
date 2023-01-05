@@ -1,0 +1,14 @@
+<span class="icon icon-{{size}}">
+    <a *ngIf="href; else imagen" [href]="href" target="_blank" rel="noreferrer">
+      <img
+        [src]="icon"
+        class="icon__image"
+      />
+    </a>
+    <ng-template #imagen>
+      <img
+      [src]="icon"
+      class="icon__image"
+      />
+    </ng-template>
+</span>

@@ -1,0 +1,33 @@
+<aside class="sidebar" [class.sidebar-active]="sidebarActivate">
+  <div class="sidebar__iconButtonBox">
+    <app-icon-button
+      (click)="toogleMenu()"
+      [text]="'Mostrar Datos'"
+      [icon]="'./assets/icons/icon_expand.svg'"
+      [size]="'small'"
+    ></app-icon-button>
+  </div>
+
+  <header class="sidebar__header">
+    <app-avatar></app-avatar>
+    <div class="sidebar__details">
+      <h1 class="sidebar__title">Jair Deyner</h1>
+      <app-chip></app-chip>
+    </div>
+  </header>
+
+  <div class="sidebar__info">
+    <app-divider></app-divider>
+
+    <app-information-card-list></app-information-card-list>
+
+    <app-divider></app-divider>
+
+    <div class="sidebar__socialIconsContainer">
+      <div *ngFor="let s of socialNetworks" class="sidebar__socialIconBox">
+        <!-- <Icon icon={s.icon} href={s.href} /> -->
+        Social
+      </div>
+    </div>
+  </div>
+</aside>
