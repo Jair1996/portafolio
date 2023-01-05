@@ -45,6 +45,7 @@
     </div>
     <div class="contactForm__buttonBox">
       <app-button
+        (click)="sendMessage()"
         [disabled]="contactForm.invalid"
         [model]="'ghost'"
         [size]="'normal'"
