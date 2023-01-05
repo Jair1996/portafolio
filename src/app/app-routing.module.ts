@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactModule } from './modules/contact/contact.module';
+import { ContactPageComponent } from './modules/contact/pages/contact-page/contact-page.component';
 
 import { HomeModule } from './modules/home/home.module';
 
@@ -18,13 +20,22 @@ const routes: Routes = [
     component: PortfolioPageComponent,
   },
   {
+    path: 'contacto',
+    component: ContactPageComponent,
+  },
+  {
     path: '**',
     redirectTo: '',
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), HomeModule, PortafolioModule],
+  imports: [
+    RouterModule.forRoot(routes),
+    HomeModule,
+    PortafolioModule,
+    ContactModule,
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
